@@ -15,7 +15,7 @@ export default function Header({ click, icon }) {
 					Smith, Nguyen & Singh
 				</Link>
 				<Navbar styles="Navbar hidden lg:flex justify-between gap-4 basis-2/5" />
-				<button onClick={ click } className="text-[1.8rem] lg:hidden" >
+				<button onClick={ click } className="text-[1.8rem] p-0 lg:hidden leading-5 w-fit" >
 					<i className={ icon }></i>
 				</button>
 			</div>
