@@ -5,7 +5,7 @@ import Specials from '../Components/SpecializationSection'
 
 export default function Home() {
   return (
-    <div>
+    <div className="mx-auto max-w-[1200px] px-clamp py-5">
       <HeroSection />
       <AboutSection />
       <Gallery />

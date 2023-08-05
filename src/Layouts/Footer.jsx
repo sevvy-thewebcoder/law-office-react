@@ -1,8 +1,9 @@
+import PropTypes from "prop-types"
 import MediaLinks from "../Components/MediaLinks"
 import Button from "../Components/Button"
 import { footerContent } from "../Constants/content"
 
-export default function Footer () {
+export default function Footer ({elRef}) {
 
   const footerLinksElements = footerContent.footerLinks.map( ( data ) => (
     <div key={data.id} className="flex flex-row lg:flex-col justify-start gap-5">
@@ -18,7 +19,7 @@ export default function Footer () {
   ))
 
   return (
-    <footer className="Footer relative bg-slate-600 text-white py-20">
+    <footer ref={ elRef } className="Footer relative bg-slate-600 text-white py-20">
       <div className="w-full max-w-[1200px] mx-auto flex flex-col gap-10 px-clamp">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] xl:grid-cols-[2fr_3fr] gap-20 sm:gap-10 md:gap-20">
           <div className="lg:row-span-2 w-[70%] sm:w-full mx-auto sm:mx-0">
@@ -45,4 +46,8 @@ export default function Footer () {
       </div>
     </footer>
   )
+}
+
+Footer.propTypes = {
+  elRef: PropTypes.string.isRequired
 }

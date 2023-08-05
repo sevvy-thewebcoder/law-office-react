@@ -1,5 +1,9 @@
-export default function Partners() {
+import ComingSoon from "../Layouts/ComingSoon"
+
+export default function Partners () {
   return (
-    <div className="container mx-auto max-w-[1200px]">Partners</div>
+    <div className="w-full mx-auto max-w-[1200px] px-clamp py-5">
+      <ComingSoon pageName="Partners" />
+    </div>
   )
 }

@@ -3,6 +3,29 @@ import galleryImgA from "../assets/images/gallery-img-a.jpg"
 import galleryImgB from "../assets/images/gallery-img-b.jpg"
 import footerImg from "../assets/images/footer-img.jpg"
 
+const navLinksHeader = [
+    {
+        id: 1,
+        linkName: "Our Office",
+        linkPath: "office"
+    },
+    {
+        id: 2,
+        linkName: "Services",
+        linkPath: "services"
+    },
+    {
+        id: 3,
+        linkName: "Partners",
+        linkPath: "partners"
+    },
+    {
+        id: 4,
+        linkName: "Contact Us",
+        linkPath: "contact"
+    },
+]
+
 const aboutSectionText = {
     sectionHeading: "At Smith, Nguyen & Singh, we are not just lawyers - we are business partners.",
     textContent: [
@@ -196,4 +219,4 @@ const footerContent = {
 }
 
 
-export { heroImg, footerImg, aboutSectionText, groupImages, specializationSectionText, footerContent }
+export { navLinksHeader, heroImg, footerImg, aboutSectionText, groupImages, specializationSectionText, footerContent }

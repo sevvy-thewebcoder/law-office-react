@@ -4,13 +4,14 @@ import { Link } from "react-router-dom"
 
 import Navbar from "../Components/Navbar"
 
-export default function Header({ click, icon }) {
+export default function Header({ click, icon, elRef, reset }) {
 	return (
-		<header className='Header flex absolute z-20 w-full h-headerHeight shadow-sm shadow-[#999999] top-0 left-0 right-0 bg-slate-600 text-white'>
-			<div className='w-full max-w-[1200px] mx-auto px-clamp flex justify-between items-center gap-2'>
+		<header ref={ elRef } className='Header flex absolute z-20 w-full shadow-sm shadow-[#999999] top-0 left-0 right-0 bg-slate-600 text-white'>
+			<div className='w-full max-w-[1200px] mx-auto px-clamp py-5 flex justify-between items-center gap-2'>
 				<Link
 					to='/'
 					className="uppercase font-bold text-[1.1rem]"
+					onClick={reset}
 				>
 					Smith, Nguyen & Singh
 				</Link>
@@ -25,5 +26,7 @@ export default function Header({ click, icon }) {
 
 Header.propTypes = {
 	click: PropTypes.func.isRequired,
-	icon: PropTypes.string.isRequired
+	icon: PropTypes.string.isRequired,
+	elRef: PropTypes.string.isRequired,
+	reset: PropTypes.func.isRequired
 }
