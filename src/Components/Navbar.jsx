@@ -17,7 +17,8 @@ export default function Navbar({ styles, reset }) {
       key={ navLink.id }
       to={ navLink.linkPath }
       style={ ( { isActive } ) => isActive ? activeLinkStyles : null }
-      onClick={reset}
+      onClick={ reset }
+      className="font-montserrat"
     >
       {navLink.linkName}
     </NavLink>
@@ -32,5 +33,5 @@ export default function Navbar({ styles, reset }) {
 
 Navbar.propTypes = {
   styles: PropTypes.string.isRequired,
-  reset: PropTypes.func.isRequired
+  reset: PropTypes.func
 }

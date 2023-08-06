@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet, ScrollRestoration } from "react-router-dom"
 import { useDynamicValue } from "../Hooks/useDynamicValue"
 import Header from "./Header"
 import Navbar from "../Components/Navbar"
@@ -16,7 +16,6 @@ export default function MainLayout () {
     
     function toggler() {   
         setToggle( !toggle )
-        console.log(toggle)
     }
 
     function resetToggleStateOnClick () {
@@ -25,7 +24,7 @@ export default function MainLayout () {
         }
     }
 
-    console.log(toggle)
+    // console.log(toggle)
 
     const stylesMobileNavbar = {
         height: `calc(100vh - ${ headerHeight }px)`,
@@ -34,6 +33,7 @@ export default function MainLayout () {
 
     return (
         <div className="w-full">
+            <ScrollRestoration />
             <div className="fixed z-50 top-0 left-0 right-0">
                 <Header reset={resetToggleStateOnClick} elRef={ refHeader } click={ toggler } icon={ toggle === true ? "ri-close-fill" : "ri-apps-fill origin-center rotate-[-360deg] transition-all" } />
                 <div style={stylesMobileNavbar} className={ `w-full absolute z-0 max-w-[1200px] mx-auto px-clamp transition-[top] ease-in duration-300 delay-300` }>

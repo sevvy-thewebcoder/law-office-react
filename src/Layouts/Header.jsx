@@ -10,7 +10,7 @@ export default function Header({ click, icon, elRef, reset }) {
 			<div className='w-full max-w-[1200px] mx-auto px-clamp py-5 flex justify-between items-center gap-2'>
 				<Link
 					to='/'
-					className="uppercase font-bold text-[1.1rem]"
+					className="font-vollkorn uppercase text-[1.25rem]"
 					onClick={reset}
 				>
 					Smith, Nguyen & Singh
@@ -27,6 +27,6 @@ export default function Header({ click, icon, elRef, reset }) {
 Header.propTypes = {
 	click: PropTypes.func.isRequired,
 	icon: PropTypes.string.isRequired,
-	elRef: PropTypes.string.isRequired,
+	elRef: PropTypes.object.isRequired,
 	reset: PropTypes.func.isRequired
 }

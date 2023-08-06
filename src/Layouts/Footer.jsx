@@ -25,17 +25,17 @@ export default function Footer ({elRef}) {
           <div className="lg:row-span-2 w-[70%] sm:w-full mx-auto sm:mx-0">
             <img src={ footerContent.footerImage } className="object-cover aspect-[1/1] md:aspect-[9/8] lg:aspect-[9/14] xl:aspect-auto" alt="" />
           </div>
-          <div className="max-w-[400px] flex flex-col justify-start gap-5">
-            <h2 className="text-[2rem]">{ footerContent.cta.title }</h2>
-            <p className="text-justify">{ footerContent.cta.text }</p>
-            <Button link={ footerContent.cta.linkPath } text={ footerContent.cta.linkText } styles="text-[0.9rem] font-semibold underline underline-offset-8 uppercase mt-5" />
+          <div className="font-montserrat max-w-[400px] flex flex-col justify-start gap-5">
+            <h2 className="text-specializationTxtClamp">{ footerContent.cta.title }</h2>
+            <p className="leading-[2] text-justify">{ footerContent.cta.text }</p>
+            <Button link={ footerContent.cta.linkPath } text={ footerContent.cta.linkText } styles="text-[0.9rem] underline underline-offset-8 uppercase mt-5" />
           </div>
-          <div className="sm:col-span-full lg:col-start-2 grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="font-lato sm:col-span-full lg:col-start-2 grid grid-cols-1 lg:grid-cols-4 gap-8">
             { footerLinksElements }
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-5 justify-between sm:items-center pt-10 border-t-2">
-          <small className="text-center sm:text-start">{ footerContent.copyright }</small>
+          <small className="font-lato text-center sm:text-start">{ footerContent.copyright }</small>
           <div className="flex flex-row justify-center sm:justify-between gap-2">
             <MediaLinks icon="ri-instagram-fill text-2xl" />
             <MediaLinks icon="ri-facebook-box-fill text-2xl" />
@@ -49,5 +49,5 @@ export default function Footer ({elRef}) {
 }
 
 Footer.propTypes = {
-  elRef: PropTypes.string.isRequired
+  elRef: PropTypes.object.isRequired
 }
